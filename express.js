@@ -19,7 +19,7 @@ const connect = async () => {
     db = await open({
       filename: dbPath,
       driver: sqlite3.Database,
-      mode: sqlite3.OPEN_READWRITE,
+      mode: 2,
     });
     app.listen(3030, () => {
       console.log("server at 3030");
@@ -37,9 +37,9 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-app.get("*", async (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", async (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 app.post("/api/create", async (req, res) => {
   try {

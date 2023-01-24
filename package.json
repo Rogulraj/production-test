@@ -2,10 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "express.js",
   "scripts": {
     "start": "node express.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon express.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix client"
   },
   "keywords": [],
   "author": "",

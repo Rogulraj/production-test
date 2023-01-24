@@ -8,7 +8,7 @@ const { open } = require("sqlite");
 
 const sqlite3 = require("sqlite3");
 
-const cros = require("cros");
+const cors = require("cors");
 
 const dbPath = path.join(__dirname, "test.db");
 
@@ -33,7 +33,7 @@ connect();
 
 app.use(express.json());
 
-app.use(cros());
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 

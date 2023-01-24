@@ -1,0 +1,9 @@
+POST http://localhost:3030/api/create
+###
+POST http://localhost:3030/api/add
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Mangooes Raj"
+}

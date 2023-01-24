@@ -19,7 +19,7 @@ const connect = async () => {
     db = await open({
       filename: dbPath,
       driver: sqlite3.Database,
-      mode: 2,
+      mode: "rw",
     });
     app.listen(3030, () => {
       console.log("server at 3030");
